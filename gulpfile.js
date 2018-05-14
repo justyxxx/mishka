@@ -121,6 +121,7 @@ gulp.task("serve", ["watch"], function () {
     server: "build",
     notify: false,
     open: true,
+    port: process.env.PORT || 5000,
     cors: true,
     ui: false
   });
