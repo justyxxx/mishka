@@ -1,0 +1,181 @@
+.main-nav {
+  position: relative;
+
+  display: block;
+
+  background-color: #ffffff;
+}
+
+.main-nav ul {
+  display: none;
+}
+
+.main-nav--no-js ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav--opened {
+  position: absolute;
+  z-index: 1;
+}
+
+.main-nav--opened ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 21px;
+  height: 20px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__icon {
+  display: none;
+}
+
+.main-nav .main-nav__icon--hamburger {
+  display: block;
+}
+
+.main-nav--opened .main-nav__icon--hamburger {
+  display: none;
+}
+
+.main-nav--opened .main-nav__icon--cross {
+  display: block;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  position: relative;
+
+  width: 100%;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-family: $font-bold;
+  color: $text-dark;
+
+  box-shadow: inset 0 -1px 0 0 $grey;
+}
+
+.main-nav__link {
+  display: inline-block;
+  height: 100%;
+  padding: 1.56em 1em 1.65em 4.47em;
+
+  font: inherit;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main-nav__link {
+    width: 320px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //width: $tablet-width;
+    min-height: 79px;
+  }
+
+  .main-nav--opened {
+    position: relative;
+  }
+
+  .main-nav ul,
+  .main-nav--opened ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__items {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    order: 1;
+
+    transform: translateY(100%);
+  }
+
+  .main-nav__item {
+    width: auto;
+
+    font-size: 15px;
+    letter-spacing: 0.01em;
+
+    box-shadow: none;
+  }
+
+  .main-nav__link {
+    padding: 1.2em 2.22em 1em 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 1050px;
+  }
+
+  .main-nav__items {
+    position: static;
+
+    order: -1;
+    margin-left: 0;
+
+    transform: none;
+  }
+
+  .main-nav__item {
+    margin-right: 33px;
+
+    font-size: 17px;
+
+    box-shadow: inset -1px 0 0 0 $grey;
+  }
+
+  .main-nav__item:last-of-type {
+    box-shadow: none;
+  }
+
+  .main-nav__link {
+    padding: 1.8em 2em 1em 0;
+  }
+}

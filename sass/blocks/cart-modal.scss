@@ -1,0 +1,117 @@
+.cart-modal {
+  position: relative;
+  top: 50%;
+
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  transform: translateY(-50%);
+}
+
+.cart-modal__heading {
+  display: block;
+  margin-top: 31px;
+  margin-bottom: 13px;
+
+  font-size: 25px;
+  line-height: 30px;
+  font-family: $font-bold;
+  text-align: center;
+  color: $text-dark;
+  text-transform: uppercase;
+}
+
+.cart-modal__action {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.cart-modal__size-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 31px;
+}
+
+.cart-modal__size-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  padding: 1.06em 1em;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-family: $font-bold;
+  text-transform: uppercase;
+
+  box-shadow: inset 2px 2px 0 0 transparentize($text-grey, 0.9),
+    inset -2px -2px 0 0 transparentize($text-grey, 0.9);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 2px 2px 0 0 transparentize($text-grey, 0.7),
+      inset -2px -2px 0 0 transparentize($text-grey, 0.7);
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 0 0 $salad,
+      inset -2px -2px 0 0 $salad;
+  }
+}
+
+.cart-modal__input:focus + .cart-modal__size-button,
+.cart-modal__input:checked + .cart-modal__size-button {
+  box-shadow: inset 2px 2px 0 0 $salad,
+    inset -2px -2px 0 0 $salad;
+}
+
+.cart-modal__button {
+  width: 100%;
+  margin-bottom: 41px;
+
+  color: #ffffff;
+
+  background-color: $salad;
+  border-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .cart-modal {
+    width: 566px;
+    padding: 0 105px;
+  }
+
+  .cart-modal__heading {
+    margin-top: 34px;
+    margin-bottom: 13px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .cart-modal__action {
+    margin-bottom: 21px;
+
+    font-size: 17px;
+  }
+
+  .cart-modal__size-button {
+    width: 112px;
+  }
+
+  .cart-modal__button {
+    margin-bottom: 44px;
+  }
+}

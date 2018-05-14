@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  padding: 0.8em 1.5em 0.85em 1.5em;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-family: $font-bold;
+  text-align: center;
+  color: $text-grey;
+  text-transform: uppercase;
+
+  background: none;
+  border: 2px solid $dark-grey;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-light;
+
+    background-color: #444444;
+  }
+
+  &:active {
+    color: transparentize($text-light, 0.7);
+  }
+}

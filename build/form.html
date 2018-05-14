@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мишка | Вязание на заказ</title>
+    <link href="img/decor/mishka.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header  page-header--inner-page">
+      <div class="page-header__top">
+        <nav class="main-nav  main-nav--no-js  content-wrapper">
+          <button class="main-nav__toggle">
+            <svg class="main-nav__icon  main-nav__icon--hamburger" width="20" height="14">
+              <use xlink:href="img/sprite.svg#icon-menu-open"></use>
+            </svg>
+            <svg class="main-nav__icon  main-nav__icon--cross" width="21" height="20">
+              <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <div class="logo">
+            <a class="logo__link" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+                <img src="img/logo/logo-mobile.svg" alt="Магазин вязаных вещей Мишка">
+              </picture>
+            </a>
+          </div>
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a class="link  main-nav__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="link  main-nav__link">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <a class="link  user-nav__search  user-nav__link" href="#" aria-label="Поиск по сайту">
+                <span class="user-nav__text-wrapper">Поиск по сайту</span>
+                <svg class="link__icon  user-nav__icon  user-nav__icon--search" width="18" height="19">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user-nav__item">
+              <a class="link  user-nav__cart  user-nav__link" href="#">
+                Корзина: пока пуста
+                <svg class="link__icon  user-nav__icon  user-nav__icon--cart" width="21" height="18">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-header__bottom  page-header__bottom--inner-page">
+        <div class="content-wrapper">
+          <nav class="secondary-nav">
+            <ul class="secondary-nav__items">
+              <li class="secondary-nav__item">
+                <a class="link  secondary-nav__link" href="#">Новые поступления</a>
+              </li>
+              <li class="secondary-nav__item">
+                <a class="link  secondary-nav__link" href="#">Распродажа</a>
+              </li>
+            </ul>
+            <div class="secondary-nav__delivery">
+              <a class="link  secondary-nav__link  secondary-nav__link--delivery" href="#">Бесплатная доставка по России</a>
+            </div>
+          </nav>
+          <h1 class="page-header__heading  page-header__heading--inner-page">Вязание на заказ</h1>
+        </div>
+      </div>
+    </header>
+    <main class="main-content  order  container">
+      <p class="order__intro">
+        Мы будем рады воплотить в жизнь ваши пожелания!
+        Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="order__group  order__group--type">
+          <legend class="order__title  order__title--type">Тип</legend>
+          <ul class="order__fields-set  order__fields-set--type">
+            <li class="oder__field  order__field--type">
+              <input class="order__radio  screen-readers-only" type="radio" id="interior" name="type" value="interior-accessory" checked>
+              <label class="order__label  order__label--radio" for="interior">Аксессуар для интерьера</label>
+            </li>
+            <li class="order__field  order__field--type">
+              <input class="order__radio  screen-readers-only" type="radio" id="toy" name="type" value="toy">
+              <label class="order__label  order__label--radio" for="toy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order__group  order__group--color">
+          <legend class="order__title  order__title--color">Цвет</legend>
+          <ul class="order__fields-set  order__fields-set--color">
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-white">
+                Белый
+                <span class="order__tick">
+                  <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-white" name="color" value="white" checked>
+                  <svg class="order__icon-tick" width="22" height="16">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-grey">
+                Серый
+                <span class="order__tick">
+                  <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-grey" name="color" value="grey" checked>
+                  <svg class="order__icon-tick" width="22" height="16">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-tiffany">
+                «Тиффани»
+                <span class="order__tick">
+                  <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-tiffany" name="color" value="tiffany">
+                  <svg class="order__icon-tick" width="22" height="16">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-black">
+                Черный
+                <span class="order__tick">
+                  <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-black" name="color" value="black">
+                  <svg class="order__icon-tick" width="22" height="16">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-rose">
+                Розовый
+                <span class="order__tick">
+                  <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-rose" name="color" value="rose">
+                  <svg class="order__icon-tick" width="22" height="16">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li class="order__field  order__field--color">
+              <label class="order__label  order__label--checkbox" for="color-orange">
+              Оранжевый
+              <span class="order__tick">
+                <input class="order__checkbox  screen-readers-only" type="checkbox" id="color-orange" name="color" value="orange">
+                <svg class="order__icon-tick" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-tick"></use>
+                </svg>
+              </span>
+            </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order__group  order__group--name">
+          <legend class="order__title  order__title--name">ФИО</legend>
+          <ul class="order__fields-set  order__fields-set--name">
+            <li class="order__field  order__field--name">
+              <label class="order__label" for="first-name">Имя:</label>
+              <input class="input-field  order__input-field  order__input-field--name" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+            </li>
+            <li class="order__field  order__field--name">
+              <label class="order__label" for="second-name">Фамилия:</label>
+              <input class="input-field  order__input-field  order__input-field--name" type="text" id="second-name" name="second-name" placeholder="Укажите фамилию*" required>
+            </li>
+            <li class="order__field  order__field--name">
+              <label class="order__label" for="middle-name">Отчество:</label>
+              <input class="input-field  order__input-field  order__input-field--name" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order__group  order__group--contacts">
+          <legend class="screen-readers-only">Ваш номер телефона и e-mail</legend>
+          <ul class="order__fields-set  order__fields-set--contacts">
+            <li class="order__field  order__field--contacts">
+              <label class="order__title  order__title--phone" for="phone">Тел</label>
+              <div class="order__field-wrapper">
+                <input class="input-field  order__input-field  order__input-field--contacts" type="tel" id="phone" name="phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
+                <svg class="order__icon-phone" width="25" height="24">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="order__field  order__field--contacts">
+              <label class="order__title  order__title--mail" for="email">E-mail</label>
+              <div class="order__field-wrapper">
+                <input class="input-field  order__input-field  order__input-field--contacts" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+                <svg class="order__icon-mail" width="32" height="32">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order__group  order__group--extra">
+          <legend class="order__title  order__title--extra">Доп</legend>
+          <label class="screen-readers-only" for="user-message">Ваши пожелания к заказу</label>
+          <textarea class="input-field  input-field--textarea  order__input-field  order__input-field--extra" cols="40" rows="5"
+                    id="user-message" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <div class="order__send">
+          <p class="order__info">
+            *Поля обязательны для заполнения
+          </p>
+          <button class="button  order__button" type="submit">Отправить заказ</button>
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__inner  content-wrapper">
+        <a href="index.html" class="page-footer__logo-link">
+          <svg class="page-footer__logo-image" width="102" height="34" aria-labelledby="footer-logo">
+            <title id="footer-logo">Магазин вязаных вещей Мишка</title>
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+        <div class="social">
+          <a class="social__link  social__link--instagram" href="https://instagram.com">
+            <span class="screen-readers-only">Мы в Инстаграме</span>
+            <svg class="social__icon  social__icon--instagram" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+          <a class="social__link  social__link--facebook" href="https://facebook.com">
+            <span class="screen-readers-only">Мы в Фейсбуке</span>
+            <svg class="social__icon  social__icon--facebook" width="15" height="29">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="social__link  social__link--twitter" href="https://twitter.com">
+            <span class="screen-readers-only">Мы в Твиттере</span>
+            <svg class="social__icon  social__icon--twitter" width="24" height="20">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="copyright__logo" aria-labelledby="academy-title" width="27" height="34">
+              <title id="academy-title">HTML Академия, продвинутый HTML/CSS интенсив</title>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.min.js" defer></script>
+  </body>
+</html>

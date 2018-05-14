@@ -1,0 +1,148 @@
+.page-header {
+  box-shadow: inset 0 1px 0 0 $grey;
+}
+
+.page-header__top {
+  min-height: 79px;
+}
+
+.page-header__bottom {
+  background: #f9f9f9 url("../img/backgrounds/hero-mobile@1x.jpg") no-repeat center -19px;
+  border-top: 1px solid $grey;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backgrounds/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
+}
+
+.page-header__bottom--inner-page {
+  background: #f1f1f1 none;
+}
+
+.page-header__heading {
+  padding: 52px 15px 104px;
+
+  font-size: 27px;
+  line-height: 30px;
+  font-family: $font-bold;
+  text-align: center;
+  color: $text-dark;
+}
+
+.page-header__heading--inner-page {
+  padding-bottom: 76px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    box-shadow: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+
+      width: 100%;
+      height: 24px;
+
+      background: transparent url("../img/backgrounds/bg-zigzag-fill.svg");
+      background-size: 768px 24px;
+    }
+  }
+
+  .page-header__top {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .page-header__bottom {
+    padding: 0;
+
+    background-image: url("../img/backgrounds/hero-tablet@1x.jpg");
+    background-position-y: -2px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backgrounds/hero-tablet@2x.jpg");
+      background-size: 1150px auto;
+    }
+  }
+
+  .page-header__bottom--inner-page {
+    background: #f1f1f1 none;
+  }
+
+  .page-header__heading {
+    margin-bottom: 29px;
+    padding-top: 83px;
+    padding-bottom: 343px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-header__heading--inner-page {
+    padding-top: 25px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    margin-bottom: 27px;
+
+    &::after {
+      bottom: -18px;
+
+      height: 34px;
+
+      background-size: 1250px 34px;
+    }
+  }
+
+  .page-header--inner-page::after {
+    background-position-x: 0;
+    background-size: 1150px 34px;
+  }
+
+  .page-header__bottom {
+    min-height: 626px;
+
+    background-image: url("../img/backgrounds/hero-desktop@1x.jpg");
+    background-size: 1250px 746px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backgrounds/hero-desktop@2x.jpg");
+    }
+  }
+
+  .page-header__bottom--inner-page {
+    min-height: 254px;
+
+    background: #f1f1f1 none;
+  }
+
+  .page-header__heading {
+    margin-top: 112px;
+    margin-bottom: 359px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-header__heading--inner-page {
+    margin-top: 53px;
+    margin-bottom: 0;
+    padding-bottom: 101px;
+  }
+}

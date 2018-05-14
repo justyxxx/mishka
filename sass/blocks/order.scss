@@ -1,0 +1,532 @@
+.order {
+  padding: 0 30px;
+}
+
+.order__intro {
+  margin-top: 22px;
+  margin-bottom: 25px;
+
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.order__title {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  padding-right: 27px;
+  overflow: hidden;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-family: $font-bold;
+  color: $salad;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 1px;
+    margin-left: 25px;
+
+    background: $salad;
+  }
+}
+
+.order__title--name {
+  margin-bottom: 30px;
+}
+
+.order__title--phone {
+  margin-bottom: 6px;
+}
+
+.order__title--mail {
+  margin-bottom: 5px;
+}
+
+.order__group {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+
+  border: none;
+}
+
+.order__group--type {
+  margin-bottom: 29px;
+}
+
+.order__group--name {
+  margin-bottom: 31px;
+}
+
+.order__group--extra {
+  margin-bottom: 0;
+}
+
+.order__fields-set {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.order__field {
+  min-height: 39px;
+  margin-bottom: 22px;
+}
+
+.order__field-wrapper {
+  position: relative;
+}
+
+.order__icon-phone {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+
+  width: 25px;
+  height: 24px;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.order__input-field:hover + .order__icon-phone,
+.order__input-field:focus + .order__icon-phone {
+  fill: $salad;
+}
+
+.order__icon-mail {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+
+  width: 32px;
+  height: 32px;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.order__input-field:hover + .order__icon-mail,
+.order__input-field:focus + .order__icon-mail {
+  fill: $salad;
+}
+
+.order__field--color {
+  position: relative;
+}
+
+.order__field:last-of-type {
+  margin-bottom: 0;
+}
+
+.order__field--contacts {
+  margin-bottom: 32px;
+}
+
+.order__label {
+  display: block;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-family: $font-bold;
+  color: $text-dark;
+
+  cursor: pointer;
+}
+
+.order__label--radio {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 14px;
+  padding-top: 10px;
+  padding-left: 62px;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 39px;
+    height: 39px;
+
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    border-color: $salad;
+  }
+
+  &:active::after {
+    border-color: transparentize(#444444, 0.7);
+  }
+}
+
+.order__radio:focus + .order__label--radio::after {
+  border-color: $salad;
+}
+
+.order__radio:checked + .order__label--radio::after {
+  background: radial-gradient(circle at center, $salad 7px, transparent 8px);
+}
+
+.order__label--checkbox {
+  position: relative;
+
+  display: inline-block;
+  padding-top: 13px;
+  padding-left: 64px;
+}
+
+.order__tick {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 39px;
+
+  border: 2px solid #444444;
+  cursor: pointer;
+}
+
+.order__label--checkbox:hover .order__tick {
+  border-color: $salad;
+}
+
+.order__label--checkbox:active .order__tick {
+  border-color: transparentize(#444444, 0.7);
+}
+
+.order__icon-tick {
+  display: none;
+  width: 22px;
+  height: 16px;
+}
+
+.order__checkbox:checked + .order__icon-tick {
+  display: block;
+}
+
+.order__input-field {
+  display: block;
+  width: 100%;
+  height: 51px;
+  padding-top: 0.85em;
+  padding-right: 2.5em;
+  padding-bottom: 1.15em;
+}
+
+.order__input-field--phone {
+  margin-bottom: 30px;
+}
+
+.order__input-field--extra {
+  display: block;
+  min-height: 140px;
+  margin-bottom: 3px;
+  padding-left: 0.9em;
+}
+
+.order__info {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.order__button {
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+@media (min-width: $tablet-width) {
+  .order {
+    padding: 0;
+  }
+
+  .order__intro {
+    margin-top: 73px;
+    margin-bottom: 6px;
+    padding: 0 50px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__group {
+    position: relative;
+
+    margin-bottom: 0;
+    padding: 50px 50px 50px 217px;
+
+    &:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .order__group--type {
+    padding-bottom: 48px;
+  }
+
+  .order__group--contacts {
+    padding-top: 66px;
+    padding-bottom: 32px;
+  }
+
+  .order__title {
+    position: absolute;
+    top: 68px;
+    left: 51px;
+
+    width: 150px;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .order__group--color {
+    margin-bottom: 16px;
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+  .order__group--name {
+    padding-bottom: 33px;
+  }
+
+  .order__title--name {
+    top: 51px;
+  }
+
+  .order__field--type {
+    margin-bottom: 23px;
+  }
+
+  .order__field--name {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .order__field--contacts {
+    margin-bottom: 22px;
+  }
+
+  .order__input-field {
+    height: 36px;
+    margin-left: 25px;
+    padding: 0;
+    padding-bottom: 18px;
+    padding-left: 17px;
+
+    font-size: 19px;
+    line-height: 18px;
+
+    &::placeholder {
+      font-size: 19px;
+      line-height: 18px;
+    }
+  }
+
+  .order__input-field--name {
+    margin-bottom: 18px;
+  }
+
+  .order__title--mail {
+    top: 143px;
+  }
+
+  .order__input-field--contacts {
+    margin-bottom: 18px;
+    margin-left: 0;
+
+    background-color: transparent;
+  }
+
+  .order__fields-set--color {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order__field--color {
+    width: 262px;
+    margin-bottom: 24px;
+  }
+
+  .order__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .order__label--radio {
+    height: 54px;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-left: 80px;
+
+    &::after {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .order__radio:checked + .order__label--radio::after {
+    background: radial-gradient(circle at center, $salad 10px, transparent 11px);
+  }
+
+  .order__label--checkbox {
+    height: 52px;
+    padding-top: 15px;
+    padding-left: 80px;
+
+    &::after {
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  .order__tick {
+    width: 54px;
+    height: 52px;
+  }
+
+  .order__tick--focused {
+    border-color: $salad;
+  }
+
+  .order__icon-tick {
+    width: 33px;
+    height: 22px;
+  }
+
+  .order__icon-phone {
+    top: -5px;
+    right: 26px;
+  }
+
+  .order__icon-mail {
+    top: -5px;
+    right: 22px;
+  }
+
+  .order__input-field--extra {
+    width: 501px;
+    min-height: 142px;
+    margin-left: 0;
+    padding-top: 15px;
+  }
+
+  .order__send {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 0 50px 50px;
+  }
+
+  .order__info {
+    margin-top: 9px;
+    margin-bottom: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__button {
+    align-self: flex-start;
+    width: auto;
+    margin-bottom: 0;
+    padding-right: 1.76em;
+    padding-left: 1.75em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order__intro {
+    margin-top: 122px;
+    padding: 0 225px;
+  }
+
+  .order__group {
+    padding-left: 225px;
+  }
+
+  .order__group--name {
+    padding-right: 225px;
+  }
+
+  .order__group--contacts {
+    padding-right: 225px;
+  }
+
+  .order__group--extra {
+    padding-bottom: 46px;
+  }
+
+  .order__title {
+    left: 115px;
+  }
+
+  .order__title--color {
+    left: 109px;
+  }
+
+  .order__title--name {
+    left: 110px;
+  }
+
+  .order__title--phone {
+    left: 112px;
+  }
+
+  .order__title--mail {
+    left: 112px;
+  }
+
+  .order__title--extra {
+    left: 112px;
+  }
+
+  .order__input-field--extra {
+    width: 700px;
+  }
+
+  .order__icon-phone {
+    top: -6px;
+    right: 8px;
+  }
+
+  .order__icon-mail {
+    top: -5px;
+    right: 4px;
+  }
+
+
+  .order__send {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
+}

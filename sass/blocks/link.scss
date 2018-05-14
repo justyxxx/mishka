@@ -1,0 +1,21 @@
+.link[href]:hover {
+  color: transparentize($text-dark, 0.4);
+}
+
+.link[href]:active {
+  color: transparentize($text-dark, 0.7);
+}
+
+.link__icon {
+  opacity: 0.2;
+}
+
+.link[href]:hover .link__icon {
+  opacity: 1;
+
+  fill: $salad;
+}
+
+.link[href]:active .link__icon {
+  opacity: 0.3;
+}

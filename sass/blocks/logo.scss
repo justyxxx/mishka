@@ -1,0 +1,53 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 79px;
+
+  box-shadow: inset 0 -1px 0 0 $grey;
+}
+
+.logo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+
+  font-size: 0;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    width: auto;
+    height: auto;
+    padding-top: 2px;
+
+    box-shadow: none;
+  }
+
+  .logo__link {
+    width: 113px;
+    height: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    margin-left: 8px;
+  }
+
+  .logo__link {
+    width: 149px;
+    height: 72px;
+  }
+}
